@@ -20,7 +20,8 @@ import fnmatch
 import configparser
 import math
 import os
-from urllib.parse import urlparse
+# from urllib.parse import urlparse ##this for python 3
+from urlparse import urlparse ##this for python 2.7
 import warnings
 
 import boto
