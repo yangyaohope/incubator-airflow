@@ -40,7 +40,7 @@ def send_email(to, subject, html_content, files=None, dryrun=False):
     path, attr = configuration.get('email', 'EMAIL_BACKEND').rsplit('.', 1)
     module = importlib.import_module(path)
     backend = getattr(module, attr)
-    return backend(to, subject, html_content, files=files, dryrun=dryrun)
+    return backend.send_email_smtp(to, subject, html_content, files=files, dryrun=dryrun)
 
 
 def send_email_smtp(to, subject, html_content, files=None, dryrun=False):
