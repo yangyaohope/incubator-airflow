@@ -8,7 +8,6 @@
 airflow/git_version
 airflow/www/static/coverage/
 airflow.db
-airflow.cfg
 airflow_login.py
 build
 cover
